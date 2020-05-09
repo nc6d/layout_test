@@ -122,6 +122,7 @@ header {
 .submit-button:hover {
    background: #50c21f;
 }
+
 /*About*/
 
 .about h1 {
@@ -152,5 +153,14 @@ header {
    font-family: Balsamiq Sans, cursive;
    color: azure;
    font-size: 25px;
-   margin: 0 40px;
+   margin: 40px;
+}
+
+.contacts a {
+   color: azure;
+   transition: .2s linear
+}
+
+.contacts a:hover {
+   color: orangered
 }
