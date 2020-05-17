@@ -3,22 +3,26 @@
 
 <head>
    <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>CatMemes</title>
    <link rel="stylesheet" href='style.css'>
+   <script src="https://kit.fontawesome.com/96b06f6b73.js" crossorigin="anonymous"></script>
    <link rel="shortcut icon" href="https://pimpmymac.files.wordpress.com/2013/10/nekoze.png" type="image/x-icon">
 </head>
 
 <body>
    <header>
-      <ul class="menu_title">CatMemes.com</ul>
-      <li class='menu_item'><a class="menu_anchor" href="#newest">Новые</a></li>
-      <li class='menu_item'><a class="menu_anchor" href="#best">Избранные</a></li>
-      <li class='menu_item'><a class="menu_anchor" href="#memes-vote">Номинация</a></li>
-      <li class='menu_item'><a class="menu_anchor" href="#about">О нас</a></li>
+      <p class="menu_title">CatMemes.com</p>
+      <nav>
+         <li class='menu_item'><a class="menu_anchor" href="#newest">Новые</a></li>
+         <li class='menu_item'><a class="menu_anchor" href="#best">Избранные</a></li>
+         <li class='menu_item'><a class="menu_anchor" href="#memes-vote">Номинация</a></li>
+         <li class='menu_item'><a class="menu_anchor" href="#about">О нас</a></li>
+      </nav>
+
    </header>
    <div class="box">
       <div class="container">
-         <span class="icon"><i class="fa fa-search"></i></span>
          <input type="search" class="searchbar" placeholder="Найти мем" />
       </div>
    </div>
@@ -56,22 +60,28 @@
       <a name='memes-vote'></a>
       <form>
          <h3>Номинация на лучший мем месяца</h3>
-         <p>
-            <input type="radio" name='answer' value='a1'>Кот-руинер
-            <input type="radio" name='answer' value='a2'>Гампи
-            <input type="radio" name='answer' value='a3'>Кот-босс
-            <input type="radio" name='answer' value='a4'>Кот-пуля
-         </p>
-         <p><input class='submit-button' type="submit"></p>
+         <div class='votes'>
+            <p><input type="radio" name='answer' value='a1'>Кот-руинер</p>
+            <p><input type="radio" name='answer' value='a2'>Гампи</p>
+            <p><input type="radio" name='answer' value='a3'>Кот-босс</p>
+            <p><input type="radio" name='answer' value='a4'>Кот-пуля</p>
+            <p><input class='submit-button' type="submit"></p>
+         </div>
       </form>
    </div>
    <div class='contacts' name='contacts'>
       <a name='contacts'></a>
       <footer>
          <ul>
-            <li><div>E-mail: catmemes.predlozhka@gmail.com</div></li>
-            <li><div>Skype: catmemes_father</div></li>
-            <li><div>Телефон: <a href="#">8-800-555-35-35</a></div></li>
+            <li>
+               <a href="mailto: catmemes.predlozhka@gmail.com" class="fas fa-envelope"> catmemes.predlozhka@gmail.com</a>
+            </li>
+            <li>
+               <a href="skype:catmemes_father?call" class="fab fa-skype"> catmemes_father</a>
+            </li>
+            <li>
+               <a href="tel: +8-800-555-35-35" class="fas fa-phone-square-alt"> 8-800-555-35-35</a>
+            </li>
          </ul>
       </footer>
    </div>
