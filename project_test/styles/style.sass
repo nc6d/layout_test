@@ -1,0 +1,290 @@
+@import url(https://fonts.googleapis.com/css?family=Balsamiq+Sans|IBM+Plex+Serif&display=swap)
+@import /colors
+
+@mixin stroke()
+  font-family: Balsamiq Sans, cursive
+  color: $myPink
+  -webkit-text-stroke: 2px #000
+  
+@mixin contacts-postition-mobliles()
+  display: flex
+  flex-direction: column
+  margin: 0
+  padding: 0
+
+@mixin mobiles-footer()
+  padding: 1px 1px
+  margin: 0
+  
+body
+  background-image: url(https://htmlcolors.com/gradients-images/53-light-purple-gradient.jpg)
+
+header
+  background-image: url(https://fscomps.fotosearch.com/compc/CSP/CSP101/cat-kitten-breed-doodle-vector-seamless-clipart__k72891735.jpg)
+
+.menu_title
+  @include stroke 
+    font-size: 30px
+    margin: 10px 30px
+    padding: 0
+    display: flex
+    justify-content: center
+
+nav
+  display: flex
+  justify-content: space-around
+  list-style: none
+
+.menu_anchor
+  @include stroke 
+    text-decoration: none
+    font-size: 40px
+    display: inline-block
+    padding: 10px 30px
+    transition: 0.2s linear
+
+  &:hover
+    color: #e2bd15
+    text-decoration: underline red
+
+.box
+  background: $myBluePink
+  text-align: center
+  height: 40px
+  margin: auto
+  padding-top: 8px
+
+.searchbar
+  border-radius: 50px
+  text-align: center
+  width: 300px
+  height: 30px
+  font-size: 20px
+  position: relative
+  transition: 0.2s linear
+
+  &:focu
+    width: 500px
+
+.memes
+  h1
+    font-family: Balsamiq Sans, cursive
+    font-size: 40px
+    color: azure
+    -webkit-text-stroke: 1px #000
+    margin-left: 90px
+    margin-top: 20px
+
+  figure
+    text-align: center
+    margin: 0
+
+  img
+    padding: 15px
+    margin-right: 5px
+    margin-bottom: 5px
+    width: 300px
+    height: 300px
+
+.memes-intro
+  font-size: 20px
+  font-family: 'IBM Plex Serif', serif
+  margin: 0 90px
+
+.memes-vote h3
+  text-align: center
+  font-size: 40px
+  font-family: Balsamiq Sans, cursive
+  -webkit-text-stroke: .6px #000
+  color: #dbaf4f
+
+.votes
+  font-family: 'IBM Plex Serif', serif
+  font-size: 20px
+  text-align: center
+
+.submit-button
+  font-size: 28px
+  border-radius: 50px
+  background: $myBluePink
+  transition: 0.2s linear
+
+  &:hover
+    background: #50c21f
+
+.about
+  h1
+    font-family: Balsamiq Sans, cursive
+    font-size: 40px
+    color: azure
+    -webkit-text-stroke: 1px #000
+    margin-left: 90px
+    margin-top: 20px
+
+  article
+    font-size: 20px
+    font-family: 'IBM Plex Serif', serif
+    margin: 0 90px
+
+footer
+  background: $myBluePink
+  padding: 10px 300px
+
+.contacts
+  ul
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    list-style: none
+
+  li
+    font-family: Balsamiq Sans, cursive
+    color: azure
+    font-size: 20px
+
+  a
+    color: azure
+    transition: .2s linear
+    text-decoration: none
+
+    &:hover
+      color: #ff4500
+
+@media screen and (max-width: 420px)
+  header
+    margin: 0
+    padding: 0
+
+  .menu_title
+    display: none
+
+  nav
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    align-items: center
+
+  .box
+    background: $myBluePink
+    text-align: center
+    height: 40px
+    margin: auto
+    padding-top: 8px
+
+  .searchbar
+    border-radius: 50px
+    text-align: center
+    width: 200px
+    height: 30px
+    font-size: 20px
+    position: relative
+    transition: 0.2s linear
+
+    &:focus
+      width: 300px
+
+  .memes
+    h1
+      text-align: center
+      margin: 0
+      padding: 20px 0
+      font-family: Balsamiq Sans, cursive
+      font-size: 40px
+      color: azure
+      -webkit-text-stroke: 1px #000
+
+    figure
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      align-items: center
+
+    img
+      padding: 15px
+      margin-right: 10px
+      margin-bottom: 10px
+      width: 300px
+      height: 300px
+
+  .memes-intro
+    font-size: 20px
+    font-family: 'IBM Plex Serif', serif
+    margin: 0 20px
+
+  .about
+    h1
+      text-align: center
+      margin: 20px 0
+      padding: 0
+
+    article
+      font-size: 20px
+      font-family: 'IBM Plex Serif', serif
+      margin: 0 20px
+
+  .votes
+    display: flex
+    flex-direction: column
+    align-items: center
+    font-size: 20px
+
+  .contacts
+    padding: 30px
+
+    li
+      display: inline
+      text-align: center
+      font-size: 15px
+      margin: 15px
+
+  footer
+    @include mobiles-footer()
+    
+  .contacts ul
+    @include contacts-postition-mobliles
+    
+
+@media screen and (min-width: 760px) and (max-width: 1150px)
+  nav
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    align-items: center
+
+  .memes
+    img
+      padding: 10px
+      margin-right: 10px
+      margin-bottom: 10px
+      width: 300px
+      height: 300px
+
+    h1
+      text-align: center
+      margin: 0
+      padding: 20px 0
+      font-size: 60px
+
+  .about h1
+    text-align: center
+    font-size: 60px
+    margin: 20px 0
+    padding: 0
+
+  .contacts
+    padding: 30px
+
+    ul
+      @include contacts-postition-mobliles
+     
+    li
+      display: inline
+      text-align: center
+      font-size: 30px
+      margin: 10px
+
+  footer
+    @include mobiles-footer()
+    
+
+
